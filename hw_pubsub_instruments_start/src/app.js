@@ -10,8 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuView = new MenuView(selectElement);
   menuView.bindEvents();
 
-
   const dataSource = new InstrumentFamilies();
   dataSource.bindEvents();
+
+  const infoDiv = document.querySelector('div#instrument-family-info');
+  const resultsView = new ResultsView(infoDiv);
+  resultsView.bindEvents();
 
 });
